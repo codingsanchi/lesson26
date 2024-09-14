@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>activity1</title>
+</head>
+<body>
+    <h1>class in js</h1>
+    <p id="p1"></p>
+    <script>
+        class student{
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+
+            }
+            show(){
+                var date=new Date().getFullYear();
+                return"name of student is "+this.name+ " and age is"+ this.age;
+            }
+        }
+        s1=new student("shivi",7);
+        document.getElementById("p1").innerHTML=s1.show();
+    </script>
+</body>
+</html>
