@@ -8,17 +8,17 @@
     <p id="p1"></p>
     <script>
         class student{
-            constructor(name,age){
+            constructor(name,year){
                 this.name=name;
-                this.age=age;
+                this.year=year;
 
             }
             show(){
                 var date=new Date().getFullYear();
-                return"name of student is "+this.name+ " and age is"+ this.age;
+                return"name of student is "+this.name+ " and age is"+(date-this.year);
             }
         }
-        s1=new student("shivi",7);
+        s1=new student("shivi",2019);
         document.getElementById("p1").innerHTML=s1.show();
     </script>
 </body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>activity2</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        class car{
+            constructor(brand){
+                this.carname=brand;
+            }
+            present(
+            ){
+                return " this is "+this.carname;
+            }
+        }
+        class model extends car{
+            constructor(brand,mod){
+                super(brand);
+                this.model=mod;
+            }
+            show(){
+                return this.present()+"and the model is"+this.model;
+            }
+        }
+        c1=new model("maruti","celerio");
+        document.getElementById("p1").innerHTML=c1.present();
+        document.getElementById("p2").innerHTML=c1.show();
+
+    </script>
+</body>
+</html>
