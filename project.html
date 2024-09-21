@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+</head>
+<body>
+    <h1> inheritance and static method</h1>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <script>
+        class car {
+                constructor(brand) {
+                    this.carname = brand;
+                }
+                present(
+                ) {
+                    return " this is " + this.carname;
+                }
+            }
+            class model extends car {
+                constructor(brand, mod) {
+                    super(brand);
+                    this.model = mod;
+                }
+                show() {
+                    return this.present() + "and the model is" + this.model;
+                }
+            }
+            c1 = new model("kia", "sonet");
+             class student {
+                    constructor(name) {
+                        this.name = name;
+                    }
+                    show() {
+                        return this.name;
+                    }
+                    static hello() {
+                        return "hello arya!";
+                    }
+                    static hi(x) {
+                        return "hi " + x.name;
+                    }
+
+
+                }
+                s1 = new student("shivika");
+                document.getElementById("p1").innerHTML = c1.present();
+                    document.getElementById("p2").innerHTML = c1.show();
+                    document.getElementById("p3").innerHTML = s1.show();
+                        document.getElementById("p4").innerHTML = student.hello();
+                        document.getElementById("p5").innerHTML = student.hi(s1);
+    </script>
+</body>
+</html>
